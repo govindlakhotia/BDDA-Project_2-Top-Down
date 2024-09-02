@@ -13,12 +13,12 @@ CREATE TABLE Suppliers (
     SupplierID INT PRIMARY KEY,
     SupplierName VARCHAR(100),
     ContactName VARCHAR(50),
-    PhoneNumber VARCHAR(15),
+    PhoneNumber CHAR(11),
     Email VARCHAR(100),
     Address VARCHAR(255),
     City VARCHAR(50),
     State VARCHAR(50),
-    ZipCode VARCHAR(10),
+    ZipCode CHAR(6),
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -39,7 +39,7 @@ CREATE TABLE Customers (
     FirstName VARCHAR(50),
     LastName VARCHAR(50),
     Email VARCHAR(100) UNIQUE,
-    PhoneNumber VARCHAR(15),
+    PhoneNumber CHAR(11),
     Address VARCHAR(255),
     City VARCHAR(50),
     State VARCHAR(50),
@@ -53,7 +53,7 @@ CREATE TABLE Employees (
     LastName VARCHAR(50),
     Position VARCHAR(50),
     Salary DECIMAL(10, 2),
-    PhoneNumber VARCHAR(15),
+    PhoneNumber CHAR(11),
     Email VARCHAR(100) UNIQUE,
     HireDate DATE,
     DepartmentID INT,
@@ -120,12 +120,12 @@ CREATE TABLE OrderPromotions (
 CREATE TABLE Shippers (
     ShipperID INT PRIMARY KEY,
     ShipperName VARCHAR(100),
-    PhoneNumber VARCHAR(15),
+    PhoneNumber CHAR(11),
     Email VARCHAR(100),
     Address VARCHAR(255),
     City VARCHAR(50),
     State VARCHAR(50),
-    ZipCode VARCHAR(10),
+    ZipCode CHAR(6),
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
